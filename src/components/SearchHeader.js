@@ -16,6 +16,7 @@ function SearchHeader(){
     const handleClick = event => {
         setShowResults(true);
     }
+
     function searchHandler(){
         handleClick();
         setPageToView('searchPage')
@@ -45,7 +46,7 @@ function SearchHeader(){
             <Form.Label className="pageSize" >Result Size</Form.Label><br></br>
             <Form.Control
                 id="pageSize"
-                placeholder = "0"
+                placeholder = '0'
                 onChange={event => setPageLength(event.target.value)}/>
             <Button variant="outline-success" onClick={searchHandler}>Search</Button>
 

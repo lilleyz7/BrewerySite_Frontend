@@ -15,7 +15,7 @@ function SaveView(props){
     
     return(
         <tr>
-            <td>{props.brewery.name}</td>
+            <td><a href={props.brewery.website_url}>{props.brewery.name}</a></td>
             <td>{props.brewery.street} {props.brewery.city}</td>
             <td>{props.brewery.brewType}</td>
             <td>{props.brewery.phoneNum}</td>
