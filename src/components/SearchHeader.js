@@ -17,11 +17,21 @@ function SearchHeader(){
         setShowResults(true);
     }
 
+    const dataManipulation = (data) => {
+        let newArray = []
+        for (let i = 0; i < pageLength; i++){
+            let randomNum = Math.floor(Math.random() * 50);
+            newArray.push(data[randomNum])
+        }
+        setBreweryList(newArray)
+        
+    }
+
     function searchHandler(){
         handleClick();
         setPageToView('searchPage')
-        axios.get(`https://api.openbrewerydb.org/breweries?by_city=${city}&per_page=${pageLength}`)
-        .then(res => {setBreweryList(res.data)
+        axios.get(`https://api.openbrewerydb.org/breweries?by_city=${city}&per_page=50`)
+        .then(res => {dataManipulation(res.data)
         })
     };
 
@@ -35,7 +45,7 @@ function SearchHeader(){
     return(
         <div>
             <Form>
-            <Form.Label>City Name  </Form.Label> <br></br>
+            <Form.Label>Search Term  </Form.Label> <br></br>
             <Form.Control
               type="search"
               placeholder="Search"
