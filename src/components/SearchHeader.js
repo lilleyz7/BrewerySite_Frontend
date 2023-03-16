@@ -57,7 +57,7 @@ function SearchHeader(){
             <Form.Control
                 id="pageSize"
                 placeholder = '0'
-                onChange={event => setPageLength(event.target.value)}/>
+                onChange={event => setPageLength(event.target.value)}/> <br/>
             <Button variant="outline-success" onClick={searchHandler}>Search</Button>
 
             </Form>

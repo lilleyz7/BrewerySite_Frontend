@@ -5,14 +5,14 @@ div{
 table{
     min-width: 80%;
     margin-bottom: 40px;
-    background-color: lightgoldenrodyellow;
+    background-color: aliceblue;
     
 }
 
 th{
     text-align: left;
     padding: 2px;
-    background-color: lightcoral;
+    background-color: lightgrey;
     padding: 15px;
 }
 
